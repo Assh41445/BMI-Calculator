@@ -1,0 +1,71 @@
+:host(){
+    --dark-blue:#0b0d21;
+    --light-pink:#e91e63;
+    --light-blue:#4f7df9;
+    --light-white:#fafafafa;
+    --size-16:16px;
+    --size-14:14px;
+    --size-12:12px;
+}
+
+.app{
+    min-height: 100vh;
+    background-image: url(/sfsites/c/resource/BmicalcApp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.box {
+    max-width: 420px;
+    text-align: center;
+    margin: auto;
+    background-color: var(--dark-blue);
+    color: var(--light-white);
+    padding: var(--size-16);
+    border-radius: 38px;
+}
+
+h1 {
+    font-size: 36px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.resultWrap {
+    background-color: #1d1e33;
+    padding: 16px;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    font-size: 14px;
+    text-align: center;
+}
+
+h2{
+    font-size: 26px;
+    color: #e91e63;
+}
+
+input{
+    padding: 8px;
+    color: #1d1e33;
+    font-size: 16px;
+}
+
+label{
+    font-size: 20px;
+    color: white;
+}
+
+.buttonClass {
+    background-color: #e91e63;
+    color: white;
+    border-color: #e91e63;
+    font-size: var(--size-16);
+    padding: var(--size-12);
+}
+
+.bmiResult{
+    font-size:30px;
+    color: var(--light-blue);
+}
