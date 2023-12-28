@@ -1,3 +1,27 @@
 <template>
-    <h1>Hello !! This is currency Converter App</h1>
+    <div class="app">
+        <div class="container">
+            <div class="slds-card customCard">
+                <form class="from1">
+                    <h1 class="slds-text-color_inverse slds-text-heading_large slds-text-align_center slds-m-bottom_large">Currency Convertor</h1>
+                    <lightning-input type="text" label="Amount" placeholder="Amount"
+                        variant="label-hidden" required></lightning-input>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <span>D1</span>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-icon icon-name='action:change_record_type' alternative-text='change_record_type'
+                                size='large' title='convert_currency'></lightning-icon>
+                        </div>
+                        <div class="slds-col">
+                            <span>D2</span>
+                        </div>
+                    </div>
+                    <button class="slds-button slds-button_neutral slds-button_stretch" >Convert</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
 </template>
