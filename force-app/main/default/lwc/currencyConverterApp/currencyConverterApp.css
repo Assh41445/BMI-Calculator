@@ -1,3 +1,8 @@
+.app{
+    background:url(/sfsites/c/resource/currencyConverterAssets/currencyConverterAssets/currencyAppBackground.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
 .container{
     display: flex;
     justify-content: center;
@@ -14,3 +19,38 @@
     min-width: 370px;
     padding:16px;
 }
+
+.customButton,.customButton:hover,.customButton:active{
+    background: #f9ba49;
+    color: #0c2451;
+    padding: 12px;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.dropdown{
+    align-items: baseline;
+}
+
+img{
+    display: block;
+    margin:auto;
+    margin-bottom: 30px;    
+}
+
+.customIcon{
+    --slds-c-icon-color-foreground-default : #f9ba49;
+    --slds-c-icon-color-background : #f9ba49;
+    --slds-c-icon-color-foreground : #0c2451;
+    transform: rotate(45deg);
+}
+
+.result{
+    font-size: 24px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    color: #1b96ff
+  }
+  .result-to{
+    color:#fb8500;
+  }

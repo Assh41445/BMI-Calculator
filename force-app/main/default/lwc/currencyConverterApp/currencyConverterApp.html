@@ -2,23 +2,48 @@
     <div class="app">
         <div class="container">
             <div class="slds-card customCard">
-                <form class="from1">
+                <form class="from1" onsubmit={convertCurrency}>
                     <h1 class="slds-text-color_inverse slds-text-heading_large slds-text-align_center slds-m-bottom_large">Currency Convertor</h1>
+                    <img src={imageUrl} alt="Currency Icon" height="150" width="150" />
                     <lightning-input type="text" label="Amount" placeholder="Amount"
-                        variant="label-hidden" required></lightning-input>
-                    <div class="slds-grid slds-gutters">
+                        variant="label-hidden" name="amount" required onchange={handleChange}></lightning-input>
+                    <div class="slds-grid slds-gutters dropdown slds-m-vertical_x-large">
                         <div class="slds-col">
-                            <span>D1</span>
+                            <lightning-combobox
+                            name="countryFrom"
+                            label="From"
+                            value={countryFrom}
+                            placeholder="From"
+                            options={countryCodeList}
+                            onchange={handleChange}
+                            variant="label-hidden" >
+                        </lightning-combobox>
                         </div>
-                        <div class="slds-col">
+                        <div class="slds-col slds-text-align_center">
                             <lightning-icon icon-name='action:change_record_type' alternative-text='change_record_type'
-                                size='large' title='convert_currency'></lightning-icon>
+                                size='large' title='convert_currency' class="customIcon"></lightning-icon>
                         </div>
                         <div class="slds-col">
-                            <span>D2</span>
+                            <lightning-combobox
+                            name="countryTo"
+                            label="To"
+                            value={countryTo}
+                            placeholder="To"
+                            options={countryCodeList}
+                            onchange={handleChange}
+                            variant="label-hidden" >
+                        </lightning-combobox>
                         </div>
                     </div>
-                    <button class="slds-button slds-button_neutral slds-button_stretch" >Convert</button>
+                    <div class="slds-text-align_center">
+                        <template if:true={result}>
+                          <div class="result">{amount} {countryFrom} = <span class="result-to">{result} {countryTo}</span></div>
+                        </template>
+                        <template if:true={error}>
+                         <div class="result">{error}</div>
+                         </template>
+                      </div>
+                    <button class="slds-button slds-button_neutral slds-button_stretch customButton" >Convert</button>
 
                 </form>
             </div>
