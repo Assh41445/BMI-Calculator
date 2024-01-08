@@ -1,0 +1,8 @@
+.app{
+    background: #091f43;
+    height: 100vh;
+}
+.block{
+    max-width: 400px;
+    min-width:375px;
+}
